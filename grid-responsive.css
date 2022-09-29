@@ -10,16 +10,15 @@ body {
 }
 
 .contenedor {
-	width: 100%;
-	max-width: 1200px;
+	width: 90%;
+	max-width: 1000px;
 	margin: 20px auto;
 	display: grid;
+	grid-gap: 20px;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(5, auto);
+	grid-template-rows: repeat(4, auto);
 
 	grid-template-areas: "header header header"
-                         "nav nav nav"
-                         "hero hero hero"
 						 "contenido contenido sidebar"
 						 "widget-1 widget-2 sidebar"
 						 "footer footer footer";
@@ -27,50 +26,20 @@ body {
 
 .contenedor > div,
 .contenedor .header,
-.contenedor .nav,
 .contenedor .contenido,
 .contenedor .sidebar,
 .contenedor .footer {
 	background: #fff;
-	padding: 1.5rem;
+	padding: 20px;
 	border-radius: 4px;
 }
 
 .contenedor .header {
 	background: #12203E;
-    height: 100px;
 	color: #fff;
 	grid-area: header;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 }
-.contenedor .header a{
-	color: #E9ECF4;
-	text-decoration: none;
-	border: 1px solid #E9ECF4;
-	padding: 5px;
-}
-.contenedor .navbar {
-	background: #122f6e;
-    margin-bottom: 20px;
-	color: #fff;
-	grid-area: nav;
-}
-.contenedor .navbar ul{
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 2rem;
-}
-.contenedor .hero {
-	grid-area: hero;
-    height: 90vh;
-    background-image: url( "../img/hero.jpg" ) ;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
+
 .contenedor .contenido {
 	grid-area: contenido;
 }
@@ -107,29 +76,13 @@ body {
 
 .contenedor .footer {
 	background: #12203E;
-    margin-top: 20px;
 	color: #fff;
 	grid-area: footer;
-	display: flex;
-	text-align: center;
-	justify-content: space-between;
 }
-.contenedor .footer .social {
-	width: 15%;
-}
-.contenedor .footer .social{
-	display: flex;
-	justify-content: space-between;
-}
-.contenedor .footer .social a{
-	color: #E9ECF4;
-	text-decoration: none;
-}
+
 @media screen and (max-width: 768px){
 	.contenedor {
 		grid-template-areas: "header header header"
-                            "nav nav nav"
-                            "hero hero hero"
 						 "contenido contenido contenido"
 						 "sidebar sidebar sidebar"
 						 "widget-1 widget-1 widget-2"
