@@ -15,9 +15,9 @@ body {
 	margin: 20px auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(5, auto);
+	grid-template-rows: repeat(6, auto);
 
-	grid-template-areas: "header header header"
+	grid-template-areas: "cabecera cabecera cabecera"
                          "nav nav nav"
                          "hero hero hero"
 						 "contenido contenido sidebar"
@@ -26,8 +26,8 @@ body {
 }
 
 .contenedor > div,
-.contenedor .header,
-.contenedor .nav,
+.contenedor .cabecera,
+.contenedor .navbar,
 .contenedor .contenido,
 .contenedor .sidebar,
 .contenedor .footer {
@@ -36,16 +36,16 @@ body {
 	border-radius: 4px;
 }
 
-.contenedor .header {
-	background: #12203E;
+.contenedor .cabecera {
+	background: #820024;
     height: 100px;
 	color: #fff;
-	grid-area: header;
+	grid-area: cabecera;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
 }
-.contenedor .header a{
+.contenedor .cabecera a{
 	color: #E9ECF4;
 	text-decoration: none;
 	border: 1px solid #E9ECF4;
@@ -53,9 +53,12 @@ body {
 }
 .contenedor .navbar {
 	background: #122f6e;
+	padding: 15px;
     margin-bottom: 20px;
 	color: #fff;
 	grid-area: nav;
+	border-top: 2px solid rgb(218, 145, 11);
+	border-bottom: 2px solid rgb(218, 145, 11);
 }
 .contenedor .navbar ul{
     display: flex;
@@ -67,9 +70,19 @@ body {
 .contenedor .hero {
 	grid-area: hero;
     height: 90vh;
-    background-image: url( "../img/hero.jpg" ) ;
+    background-image: url( "../img/hero.jpg"  ) ;
+	position: relative;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+}
+.contenedor .hero .filtro{
+	background-color: #0a142950;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 .contenedor .contenido {
 	grid-area: contenido;
