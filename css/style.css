@@ -37,13 +37,24 @@ body {
 }
 
 .contenedor .cabecera {
+	background: linear-gradient(90deg, #fff, #fff,  #820024) ;
 	background: #820024;
-    height: 100px;
+    height: 130px;
 	color: #fff;
 	grid-area: cabecera;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+.contenedor .cabecera .logo{
+	width: 200px;
+	height: 100%;
+}
+.contenedor .cabecera .logo .img-logo{
+	width: 150px;
+	object-fit: cover;
+	border: 2px solid #122f6e;
+	box-shadow: 3px 3px 4px #fff;
 }
 .contenedor .cabecera a{
 	color: #E9ECF4;
