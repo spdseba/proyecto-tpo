@@ -204,34 +204,6 @@ body {
 }
 
 /***********************/
-  /*
-  .main-header {
-	height: 50px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: white;
-	padding: 0 0.4rem;
-  }
-
-  .main-logo {
-	color: black;
-	font-size: 32px;
-	text-decoration: none;
-  }
-  
-  .main-nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100vh;
-	width: 100%;
-	margin-left: -100%;
-	transition: all 0.2s linear;
-	background-color: rgba(0, 0, 0, 0.7);
-	z-index: 100;
-  }
-    */
   .navbar.mostrar {
 	margin-left: 0;
   }
@@ -485,3 +457,140 @@ body {
 
 }
 /** Fin Contacto **/
+
+/** Quienes Somos  **/
+.contenedor-quienes-somos{
+	width: 100%;
+	max-width: 1200px;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 20vh 9vh 4fr 1fr;
+
+	grid-template-areas: "cabecera cabecera cabecera"
+                         "nav nav nav"
+						 "contenido contenido contenido"
+						 "footer footer footer";
+}
+
+
+.contenedor-quienes-somos .contenido {
+	grid-area: contenido;
+	min-height: 90vh;
+	background-color: #fff;
+	padding: 2rem;
+}
+.contenedor-quienes-somos .contenido h1{
+	font-size: 2rem;
+	margin: 30px 0;
+}
+.contenedor-quienes-somos .contenido h2{
+	font-size: 1.7rem;
+	margin: 30px 0;
+}
+.contenedor-quienes-somos .contenido .lista{
+	margin: 0 0 5rem 5rem;
+}
+.contenedor-quienes-somos .contenido span.saludo{
+	margin-top: 2rem;
+	color: #444444;
+	font-weight: 700;
+}
+@media screen and (max-width: 768px){
+	.contenedor-quienes-somos {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 20vh auto 1fr;
+		grid-template-areas: "cabecera cabecera cabecera"
+						 	"contenido contenido contenido"
+							 "footer footer footer";
+	}
+	.contenedor-quienes-somos .sesion{
+		display: none;
+	}
+	.contenedor-quienes-somos .navbar{
+		display: none;
+	}
+
+}
+
+
+/** Fin Quienes Somos  **/
+
+/** Equipo **/
+
+.contenedor-equipo{
+	width: 100%;
+	max-width: 1200px;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 20vh 9vh 4fr 1fr;
+
+	grid-template-areas: "cabecera cabecera cabecera"
+                         "nav nav nav"
+						 "contenido contenido contenido"
+						 "footer footer footer";
+}
+
+
+.contenedor-equipo .contenido {
+	grid-area: contenido;
+	min-height: 90vh;
+	background-color: #fff;
+	padding: 10px;
+}
+.contenedor-equipo .contenido .galeria-flex{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.contenedor-equipo .contenido .tarjeta{
+	width: 18rem;
+	border: 1px solid #aeabab;
+	overflow: hidden;
+	border-radius: 10px;
+	margin: 2rem;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+.contenedor-equipo .contenido .tarjeta .tartjeta-img{
+	width: 100%;
+	object-fit: cover;
+	overflow: hidden;
+}
+.contenedor-equipo .contenido .tarjeta .tartjeta-img{
+	width: 100%;
+	object-fit: cover;
+	overflow: hidden;
+}
+.contenedor-equipo .contenido .tarjeta .tarjeta-cuerpo{
+	margin: 5px;
+}
+.contenedor-equipo .contenido h1{
+	font-size: 2rem;
+	margin: 30px 0;
+}
+.contenedor-equipo .contenido h2{
+	font-size: 1.7rem;
+	margin: 30px 0;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor-equipo {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 20vh auto 1fr;
+		grid-template-areas: "cabecera cabecera cabecera"
+						 	"contenido contenido contenido"
+							 "footer footer footer";
+	}
+	.contenedor-equipo .sesion{
+		display: none;
+	}
+	.contenedor-equipo .navbar{
+		display: none;
+	}
+
+}
+/** Fin Equipo **/
