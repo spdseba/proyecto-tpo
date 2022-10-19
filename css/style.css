@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
 /**Reset CSS **/
 * {
 	margin: 0;
@@ -40,7 +41,7 @@ body {
 	margin: 20px auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 20vh 9vh 90vh 5fr 2fr 1fr;
+	grid-template-rows: 20vh 9vh 90vh auto 1fr 1fr;
 
 	grid-template-areas: "cabecera cabecera cabecera"
                          "nav nav nav"
@@ -67,6 +68,9 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+.cabecera .escuela_titulo{
+
 }
 .cabecera .logo{
 	width: 200px;
@@ -202,7 +206,9 @@ body {
 	color: #E9ECF4;
 	text-decoration: none;
 }
-
+.footer .social a:hover{
+	color: #820024;
+}
 /***********************/
   .navbar.mostrar {
 	margin-left: 0;
@@ -278,6 +284,7 @@ body {
 	font-weight: 700;
 	color: #fff;
 	z-index: 50;
+	text-align: center;
 }
 .contenedor .hero .llamado-a-accion a{
 	font-size: 1rem;
@@ -294,7 +301,7 @@ body {
 	-o-transition: all 1s ease;
 }
 .contenedor .hero .llamado-a-accion a:hover{
-	color: #fff;
+	color: pink;
 	border: 2px solid #fAA43D;
 	background-color: #820024;
 }
@@ -315,18 +322,26 @@ body {
 	grid-column: 3 / 4;
 	background-color: #fAA43D;
 	text-align: center;
+	padding: 20px;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	min-height: 100px;
 	grid-area: sidebar;
 }
+.contenedor .sidebar .tarjeta{
+	margin-top: 20px;
+	width: 60%;
+}
+.contenedor .sidebar .tarjeta img{
+	width: 100%;
+}
 
 .contenedor .widget-1,
 .contenedor .widget-2 {
-	background: #55a8fd;
-	color: #fff;
-	min-height: 100px;
+	color: rgb(23, 23, 23);
+	min-height: 80px;
 	text-align: center;
 	display: flex;
 	align-items: center;
@@ -341,7 +356,179 @@ body {
 	grid-area: widget-2;
 }
 
+/* ACORDEON */
+.contenedor .acordeon {
+	width: 800px;
+	margin: 90px auto;
+	color: black;
+	padding: 45px 45px;
+  }
+  .acordeon .contenedor-acordeon {
+	position: relative;
+	margin: 10px 10px;
+  }
+  
+  /* Posiciona las etiquetas en relación con el contenedor. Añade relleno en la parte superior e inferior y aumenta el tamaño de la fuente. También hace que su cursor sea un puntero */
+  
+  .acordeon .etiqueta {
+	position: relative;
+	padding: 10px 0;
+	color: black;
+	cursor: pointer;
+  }
+  /* Posiciona el signo más a 5px de la derecha. Lo centra utilizando la propiedad transform. */
 
+.acordeon .etiqueta::before {
+	content: '+';
+	color: black;
+	position: absolute;
+	top: 50%;
+	right: -5px;
+	transform: translateY(-50%);
+  }
+  
+  /* Oculta el contenido (altura: 0), disminuye el tamaño de la fuente, justifica el texto y añade la transición */
+  
+  .acordeon .contenido {
+	position: relative;
+	background: white;
+	height: 0;
+	text-align: justify;
+	width: 100%;
+	overflow: hidden;
+	transition: 0.5s;
+  }
+  
+  /* Añade una línea horizontal entre los contenidos */
+  
+  .acordeon hr {
+	width: 100;
+	margin-left: 0;
+	border: 1px solid grey;
+  }
+
+/* Muestra la parte de contenido cuando está activa. Establece la altura */
+
+.acordeon .contenedor-acordeon.activa .contenido {
+	height: 150px;
+  }
+  
+  /* Cambia de signo positivo a negativo una vez activado */
+  
+  .acordeon .contenedor-acordeon.activa .etiqueta::before {
+	content: '-';
+	font-size: 30px;
+  }
+  /* Noticias */
+  .contenedor-equipo .contenido .noticia{
+	margin-top: 40px;
+	width: 90%;
+	position: relative;
+}
+.contenedor-equipo .contenido .noticia img{
+	width: 100%;
+	height: 30vh;
+	object-fit: cover;
+}
+.contenedor-equipo .contenido .noticia .fecha{
+	position: absolute;
+	top: -10px;
+	right: 10px;
+	background-color: #fAA43D;
+	padding: 5px;
+	border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-ms-border-radius: 10px 10px 10px 10px;
+	-o-border-radius: 10px 10px 10px 10px;
+}
+.contenedor-equipo .contenido .noticia .noticia-titulo{
+	margin: 10px 0 0 10px;
+}
+.contenedor-equipo .contenido .noticia .noticia-texto{
+	margin: 10px 0 10px 10px;
+}
+.widget{
+
+}
+.widget .widget_tarjeta{
+	display: flex;
+	flex-direction: column;
+}
+.widget .widget_tarjeta p{
+	margin: 10px 0;
+}
+@media screen and (max-width: 996px){
+	.contenedor {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 20vh 90vh auto 2fr 2fr 2fr;
+		grid-template-areas:	"cabecera cabecera cabecera"
+								"hero hero hero"
+								"contenido contenido contenido"
+								"sidebar sidebar sidebar"
+								"widget-1 widget-2 widget-2"
+								"footer footer footer";
+	}
+	.menu-vertical.visible{
+		display: flex;
+		background-color: #444444;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #444444;
+		left: 0;
+		position: fixed;
+}
+	.contenedor .navbar{
+		display: none;
+	}
+	.contenedor .sesion{
+		display: none;
+	}
+	.contenedor .boton{
+		z-index: 9999;
+	}
+	.cabecera .boton-hamburguesa{
+		display: block;
+		z-index: 999;
+	}
+	.cabecera .boton-menu{
+		z-index: 200;
+		width: 40px;
+		height: 40px;
+		border: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+	  }
+	  
+	  .cabecera .boton-menu span{
+		width: 37px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: #fff;
+		border-radius: 3px;
+		transform-origin: 4px 0px;
+		transition: all .2s linear;
+	  }
+	  
+	  .cabecera .boton-menu.close span {
+		opacity: 1;
+		transform: rotate(45deg) translate(0px, 0px);
+		background: #ffffff;
+	  }
+	  
+	  .cabecera .boton-menu.close span:nth-child(2){
+		transform: rotate(-45deg) translate(-8px, 5px);
+	  }
+	  
+	  .cabecera .boton-menu.close span:nth-child(3){
+		display: none;
+	  }
+}
 @media screen and (max-width: 768px){
 	.contenedor {
 		grid-template-columns: repeat(3, 1fr);
@@ -413,7 +600,88 @@ body {
 		display: none;
 	  }
 }
-
+@media screen and (max-width: 576px){
+	.contenedor {
+		
+		grid-template-columns: 1fr;
+		grid-template-rows: 20vh 90vh auto 2fr 2fr 2fr;
+		grid-template-areas:	"cabecera"
+								"hero "
+								"contenido "
+								"sidebar"
+								"widget-1"
+								" widget-2"
+								"footer";
+	}
+	.contenedor .hero .llamado-a-accion h1{
+		font-size: 7vw;
+	}
+	.contenedor .contenido h1{
+		font-size: 1rem;
+	}
+	.menu-vertical.visible{
+		display: flex;
+		background-color: #444444;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #444444;
+		left: 0;
+		position: fixed;
+}
+	.contenedor .navbar{
+		display: none;
+	}
+	.contenedor .sesion{
+		display: none;
+	}
+	.contenedor .boton{
+		z-index: 9999;
+	}
+	.cabecera .boton-hamburguesa{
+		display: block;
+		z-index: 999;
+	}
+	.cabecera .boton-menu{
+		z-index: 200;
+		width: 40px;
+		height: 40px;
+		border: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+	  }
+	  
+	  .cabecera .boton-menu span{
+		width: 37px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: #fff;
+		border-radius: 3px;
+		transform-origin: 4px 0px;
+		transition: all .2s linear;
+	  }
+	  
+	  .cabecera .boton-menu.close span {
+		opacity: 1;
+		transform: rotate(45deg) translate(0px, 0px);
+		background: #ffffff;
+	  }
+	  
+	  .cabecera .boton-menu.close span:nth-child(2){
+		transform: rotate(-45deg) translate(-8px, 5px);
+	  }
+	  
+	  .cabecera .boton-menu.close span:nth-child(3){
+		display: none;
+	  }
+	.footer .social{
+		width: 200px;
+	}
+}
 /** Fin Index **/
 /** Contacto **/
 
@@ -439,7 +707,15 @@ body {
 .contenedor-contacto .contenido h2{
 	font-size: 1.7rem;
 }
-
+.contenedor-contacto .contenido span{
+	color: red;
+	float: right;
+	font-size: 0.7rem;
+}
+.contenedor-contacto .contenido .container form .error{
+	color: red;
+	border: 2px solid red;
+}
 @media screen and (max-width: 768px){
 	.contenedor-contacto {
 		grid-template-columns: repeat(3, 1fr);
@@ -457,6 +733,72 @@ body {
 
 }
 /** Fin Contacto **/
+/* Oferta */
+.ofertas{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.oferta{
+	box-sizing: border-box;
+	width: 25%;
+	margin: 10px;
+	position: relative;
+}
+.box-imagen{
+    width: 300px;
+    height: 300px;
+    border:1px solid #ccc;
+    padding:10px;
+	margin: 20px;
+	overflow: hidden;
+	background-color: #122f6e;
+  }
+  
+  .imagen{
+    height: 70%;
+	width: 100%;
+	overflow: hidden;
+    border:1px solid #ccc;
+    margin-bottom:10px;
+	object-fit: cover;
+  }
+  .box-imagen .imagen img{
+	object-fit: cover;
+	background-color: #820024;
+  }
+  .box-boton{
+	width: 35%;
+	margin: auto;
+	text-align: center;
+	background-color: #ccc;
+	cursor: pointer;
+  }
+  
+  .contenido .ofertas .oferta .visible {
+    width: 300px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+    border:2px solid #fAA43D;
+	color: #E9ECF4;
+    padding: 18px 10px ;
+	margin: 0px auto;
+    z-index:100;
+	background-color: #820024;
+	text-align: justify;
+   }
+  
+  .oculto{
+    display:none;
+  }
+  
+  .visible{
+    display:block;
+  }
+
+/* FIN OFERTA */
 
 /** Quienes Somos  **/
 .contenedor-quienes-somos{
@@ -555,15 +897,12 @@ body {
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
 }
-.contenedor-equipo .contenido .tarjeta .tartjeta-img{
+.contenedor-equipo .contenido .galeria-flex .tarjeta .tarjeta-img{
 	width: 100%;
-	object-fit: cover;
-	overflow: hidden;
 }
-.contenedor-equipo .contenido .tarjeta .tartjeta-img{
+.contenedor-equipo .contenido .galeria-flex .tarjeta .tarjeta-img img{
 	width: 100%;
 	object-fit: cover;
-	overflow: hidden;
 }
 .contenedor-equipo .contenido .tarjeta .tarjeta-cuerpo{
 	margin: 5px;
