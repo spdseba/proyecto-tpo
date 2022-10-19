@@ -1,110 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Font awesome 6.2.0-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+ 
     <link rel="stylesheet" href="css/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>Proyecto TPO</title>
 </head>
 <body>
     <div class="contenedor">
         <header class="cabecera">
-            <div class="logo"><img src="img/logo.jpeg" class="img-logo" alt=""></div>
-            <h2>Escuela</h2>
+            <div class="logo"><a href="index.html"><img src="img/logo.jpeg" class="img-logo" alt=""></a></div>
+            <div class="escuela_titulo"><img src="img/assets/titulo.png" alt="Urban College"></div>
             <div class="sesion">
                 <a href="#">Iniciar sesión</a>
                 <a href="#">Registrarse</a>
             </div>
+            <div class="boton-hamburguesa">
+                <button id="boton-menu" class="boton-menu" >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="quienes-somos.html">Quienes Somos</a></li>
-                <li><a href="inscripciones.html">Inscripciones</a></li>
-                <li><a href="equipo.html">Equipo</a></li>
-                <li>Item4</li>
+        <nav class="navbar" id="navbar">
+            <ul id="menu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="quienes-somos.html" class="link-item">Quienes Somos</a></li>
+                <li><a href="oferta.html" class="link-item">Oferta</a></li>
+                <li><a href="equipo.html" class="link-item">Equipo</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
         <section class="hero">
+            <div class="llamado-a-accion">
+                <h1 class="animate__animated  animate__backInLeft">Bienvenido/a! <br>
+                    Ciclo Lectivo 2023
+                </h1>
+                <a href="#" class="boton-oferta">Conoce nuestra oferta</a>
+            </div>
             <div class="filtro"></div>
         </section>
+        <div class="menu-vertical" id="menu-vertical">
+            <ul id="menu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="quienes-somos.html" class="link-item">Quienes Somos</a></li>
+                <li><a href="oferta.html" class="link-item">Oferta</a></li>
+                <li><a href="equipo.html" class="link-item">Equipo</a></li>
+                <li><a href="noticias.html" class="link-item active">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <span class="ir-arriba icon-arrow-up2"></span>
         <main class="contenido">
             <h1>Contenido</h1>
+            <br>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis rutrum gravida. Aliquam vel
-                nunc sit amet nibh aliquam sollicitudin eu vitae elit. Duis varius turpis est, at feugiat metus blandit
-                non. Mauris est nunc, ullamcorper nec egestas at, faucibus ac ex. Cras gravida ut odio eget vulputate.
-                Suspendisse ut nunc cursus, vulputate tortor id, mollis magna. Proin mattis euismod magna. Suspendisse
-                mattis, nunc vitae mattis iaculis, elit massa facilisis magna, ac consequat magna lacus sit amet lectus.
-                Suspendisse a lacinia est, a semper turpis. Phasellus lobortis eget nibh in scelerisque. Morbi feugiat
-                volutpat nisl, vehicula commodo augue volutpat at. Aenean aliquet tristique diam. Aenean maximus, quam
-                non sollicitudin efficitur, est sapien pharetra odio, eget aliquam justo urna eu eros. Donec nec
-                tincidunt tortor.
+                Una vez inscripto vas a cursar tres materias cada dos meses. Las materias las preparas desde tu PC, Notebook, Tablet o Smartphone mediante nuestra plataforma virtual, con clases que explican cada tema con videos, audios, imágenes, ejercicios, pudiendo descargar y ver los libros de cada materia y hasta teniendo la posibilidad de realizar consultas a los docentes.
+            </p>
+            Además contarás con clases en vivo optativas mediante Google Meet todas las semanas, donde el docente profundizará los temas abordados en el campus.
             </p>
             <p>
-                Maecenas pharetra pretium quam ut posuere. Quisque luctus sem purus. Phasellus vel nibh sed erat
-                interdum placerat eget a dui. Vivamus viverra pharetra congue. Sed pretium mi eu dui congue pulvinar.
-                Donec felis risus, malesuada quis tristique faucibus, vestibulum non urna. Fusce nec orci pulvinar,
-                blandit velit quis, finibus neque. Mauris malesuada metus eget ornare pellentesque. Nunc pharetra ante
-                eget ullamcorper finibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus. Nulla maximus a dolor non condimentum. Suspendisse convallis ullamcorper justo.
+                Todas las clases en vivo son grabadas y las tendrás a disposición para que las veas cuando quieras, cuantas veces desees.
             </p>
             <p>
-                Nullam ut erat sit amet elit ultricies tempor vel eget magna. Vivamus vitae diam purus. Fusce semper
-                nisl a nulla congue feugiat. Maecenas et tincidunt felis, dapibus rhoncus sapien. Maecenas tortor
-                tortor, sagittis ac mattis sed, ullamcorper et orci. Pellentesque quis mollis massa. Donec lacinia
-                turpis sapien, eu tincidunt dui rutrum elementum. Maecenas dictum et metus eget aliquam. Sed imperdiet
-                lacinia vulputate. Vivamus mauris arcu, faucibus pulvinar laoreet sed, scelerisque et dui.
+                Los exámenes se rinden a través de la plataforma virtual, son escritos y se pueden realizar por medio de cualquier dispositivo.
             </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis rutrum gravida. Aliquam vel
-                nunc sit amet nibh aliquam sollicitudin eu vitae elit. Duis varius turpis est, at feugiat metus blandit
-                non. Mauris est nunc, ullamcorper nec egestas at, faucibus ac ex. Cras gravida ut odio eget vulputate.
-                Suspendisse ut nunc cursus, vulputate tortor id, mollis magna. Proin mattis euismod magna. Suspendisse
-                mattis, nunc vitae mattis iaculis, elit massa facilisis magna, ac consequat magna lacus sit amet lectus.
-                Suspendisse a lacinia est, a semper turpis. Phasellus lobortis eget nibh in scelerisque. Morbi feugiat
-                volutpat nisl, vehicula commodo augue volutpat at. Aenean aliquet tristique diam. Aenean maximus, quam
-                non sollicitudin efficitur, est sapien pharetra odio, eget aliquam justo urna eu eros. Donec nec
-                tincidunt tortor.
-            </p>
-            <p>
-                Maecenas pharetra pretium quam ut posuere. Quisque luctus sem purus. Phasellus vel nibh sed erat
-                interdum placerat eget a dui. Vivamus viverra pharetra congue. Sed pretium mi eu dui congue pulvinar.
-                Donec felis risus, malesuada quis tristique faucibus, vestibulum non urna. Fusce nec orci pulvinar,
-                blandit velit quis, finibus neque. Mauris malesuada metus eget ornare pellentesque. Nunc pharetra ante
-                eget ullamcorper finibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus. Nulla maximus a dolor non condimentum. Suspendisse convallis ullamcorper justo.
-            </p>
-            <p>
-                Nullam ut erat sit amet elit ultricies tempor vel eget magna. Vivamus vitae diam purus. Fusce semper
-                nisl a nulla congue feugiat. Maecenas et tincidunt felis, dapibus rhoncus sapien. Maecenas tortor
-                tortor, sagittis ac mattis sed, ullamcorper et orci. Pellentesque quis mollis massa. Donec lacinia
-                turpis sapien, eu tincidunt dui rutrum elementum. Maecenas dictum et metus eget aliquam. Sed imperdiet
-                lacinia vulputate. Vivamus mauris arcu, faucibus pulvinar laoreet sed, scelerisque et dui.
-            </p>
+            <div class="acordeon-cuerpo">
+                <div class="acordeon">
+                  <h1>Preguntas Frecuentes</h1>
+                  <hr>
+                  <div class="contenedor-acordeon">
+                    <div class="etiqueta">¿Quiénes pueden anotarse?</div>
+                    <div class="contenido">Nuestro bachillerato no tiene límite de edad, como mínimo debes tener 18 años. El único requisito es que tengas finalizados los estudios primarios. Podés inscribirte con una fotocopia del DNI y una constancia de estudios anteriores.</div>
+                  </div>
+                  <hr>
+                  <div class="contenedor-acordeon">
+                    <div class="etiqueta">¿Qué título obtengo?</div>
+                    <div class="contenido">Esba es una Institución educativa Oficial (DIEGEP 6278). Te otorgará el título de Bachiller con Orientación en Ciencias Naturales, Salud y Medio Ambiente. Con nuestro título podrás inscribirte en cualquier universidad pública o privada, presentarlo en tu trabajo o realizar cualquier curso que requiera el secundario terminado. Nuestro título tiene la misma validez que cualquier colegio público o privado.
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="contenedor-acordeon">
+                    <div class="etiqueta">¿En cuánto tiempo me recibo?</div>
+                    <div class="contenido">Nuestro plan de estudios (6794/00) te ofrece la posibilidad que te gradúes en 2 años o menos. Si ya tenés estudios secundarios cursados, presentas un certificado y evaluaremos si podes terminarlo en menos de dos años.
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="contenedor-acordeon">
+                    <div class="etiqueta">¿En qué fechas puedo anotarme?</div>
+                    <div class="contenido">La inscripción se encuentra abierta todo el año. Te inscribís y comenzás a cursar en el momento.
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="contenedor-acordeon">
+                    <div class="etiqueta">¿Qué documentación necesito para inscribirme?</div>
+                    <div class="contenido">Foto del DNI (Frente y Dorso) , Foto de la partida de nacimiento y certificado de estudios cursados con anterioridad.
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="contenedor-acordeon">
+                    <div class="etiqueta">¿Cuales son los aranceles del bachillerato?</div>
+                    <div class="contenido">Matrícula anual: $5500.-<br>
+                        Cuota mensual: $6000.-<br>
+                        
+                        Importes validos hasta Julio 2022 (Inclusive).
+                    </div>
+                  </div>
+                </div>
+            </div>
         </main>
         <aside class="sidebar">
-            <h3>SIDEBAR</h3>
+            <h3>Últimas Noticias</h3>
+            <article class="tarjeta">
+                <div class="tarjeta-titulo">Noticia Uno</div>
+                <div class="tarjeta-img"><img src="img/ultimas-noticias/2022-08-22-762-imagen.jpg" alt=""></div>
+            </article>
+            <article class="tarjeta">
+                <div class="tarjeta-titulo">Noticia Uno</div>
+                <div class="tarjeta-img"><img src="img/ultimas-noticias/1.jpg" alt=""></div>
+            </article>
+            <article class="tarjeta">
+                <div class="tarjeta-titulo">Noticia Uno</div>
+                <div class="tarjeta-img"><img src="img/ultimas-noticias/2.jpg" alt=""></div>
+            </article>
+            <article class="tarjeta">
+                <div class="tarjeta-titulo">Noticia Uno</div>
+                <div class="tarjeta-img"><img src="img/ultimas-noticias/3.jpg" alt=""></div>
+            </article>
+            <article class="tarjeta">
+                <div class="tarjeta-titulo">Noticia Uno</div>
+                <div class="tarjeta-img"><img src="img/ultimas-noticias/4.jpg" alt=""></div>
+            </article>
+            <article class="tarjeta">
+                <div class="tarjeta-titulo">Noticia Uno</div>
+                <div class="tarjeta-img"><img src="img/ultimas-noticias/5.jpg" alt=""></div>
+            </article>
+            <article class="tarjeta">
+                <div class="tarjeta-titulo">Estadísticas personales</div>
+                <div class="tarjeta-img"><img src="img/ultimas-noticias/6.jpg" alt=""></div>
+            </article>
+            <article class="tarjeta">
+                <div class="tarjeta-titulo">El arte ayuda en el aprendizaje</div>
+                <div class="tarjeta-img"><img src="img/ultimas-noticias/7.jpg" alt=""></div>
+            </article>
+            <hr>
         </aside>
         <div class="widget-1">
-            <h3>WIDGET 1</h3>
+            <div class="widget">	
+				<div class="widget_tarjeta ">
+                    <div class="widget_tarjeta_contenido">
+                        <p>
+                            <img loading="lazy" src="img/assets/iconzoom-293x300.png" width="73" height="64" alt="" class="wp-image-49386 alignnone size-medium">
+                        </p>
+                        <p>
+                            <span style="color: #05058e; font-size: x-large;">MODALIDAD 100%<br> A DISTANCIA</span>
+                        </p>
+                        <p>
+                            <img loading="lazy" src="img/assets/sep.jpg" width="100" height="10" alt="" class="wp-image-59 alignnone size-full">
+                        </p>
+                        <p>Cursada a distancia con clases en vivo y acceso a una plataforma online las 24 horas, los 365 días, donde podrás consultar todo el material y los contenidos vistos.
+                        </p>
+                    </div>
+			    </div> <!-- -->
+			</div>
         </div>
         <div class="widget-2">
-            <h3>WIDGET 2</h3>
+            <div class="widget">	
+				<div class="widget_tarjeta ">
+                    <div class="widget_tarjeta_contenido">
+                        <p>
+                            <img loading="lazy" src="img/assets/icono_diploma.svg" width="73" height="64" alt="" class="wp-image-49386 alignnone size-medium">
+                        </p>
+                        <p>
+                            <span style="color: #05058e; font-size: x-large;">TÍTULO<br> OFICIAL</span>
+                        </p>
+                        <p>
+                            <img loading="lazy" src="img/assets/sep.jpg" width="100" height="10" alt="" class="wp-image-59 alignnone size-full">
+                        </p>
+                        <p>Nuestro título tiene la misma validez que cualquier colegio público o privado.
+                            <br>
+                            <strong>R.M. 6794/00 | D.I.E.G.E.P 6278</strong>
+                        </p>
+                    </div>
+			    </div> <!-- -->
+			</div>
         </div>
         <footer class="footer">
-            <h3 class="brand">FOOTER</h3>
+            <h3 class="brand">Urban College</h3>
             <div class="social">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/urbancollege/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/urbancollege/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.twitter.com/urbancollege/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/urbancollege/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                 </ul>    
             </div>
         </footer>
     </div>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
