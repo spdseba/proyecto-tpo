@@ -295,10 +295,12 @@ body {
 	margin: 20px;
 	z-index: 50;
 	transition: all 1s ease;
+	animation: 2.5s ease aparecer;
 	-webkit-transition: all 1s ease;
 	-moz-transition: all 1s ease;
 	-ms-transition: all 1s ease;
 	-o-transition: all 1s ease;
+	-webkit-animation: 2.5s ease aparecer;
 }
 .contenedor .hero .llamado-a-accion a:hover{
 	color: pink;
@@ -933,3 +935,13 @@ body {
 
 }
 /** Fin Equipo **/
+
+@keyframes aparecer {
+	from {
+	  opacity:0;
+	}
+  
+	to {
+	  opacity:1
+	}
+  }
