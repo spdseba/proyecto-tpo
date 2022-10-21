@@ -322,7 +322,7 @@ body {
 
 .contenedor .sidebar {
 	grid-column: 3 / 4;
-	background-color: #fAA43D;
+	background-color: #1e3847;
 	text-align: center;
 	padding: 20px;
 	display: flex;
@@ -332,9 +332,23 @@ body {
 	min-height: 100px;
 	grid-area: sidebar;
 }
+.contenedor .sidebar h3{
+	color: #ccc;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
 .contenedor .sidebar .tarjeta{
 	margin-top: 20px;
 	width: 60%;
+	background-color: rgb(230, 227, 227);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+.contenedor .sidebar .tarjeta .tarjeta-titulo{
+	font-size: 0.9rem;
 }
 .contenedor .sidebar .tarjeta img{
 	width: 100%;
@@ -460,86 +474,17 @@ body {
 .widget .widget_tarjeta p{
 	margin: 10px 0;
 }
-@media screen and (max-width: 996px){
-	.contenedor {
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 20vh 90vh auto 2fr 2fr auto;
-		grid-template-areas:	"cabecera cabecera cabecera"
-								"hero hero hero"
-								"contenido contenido contenido"
-								"sidebar sidebar sidebar"
-								"widget-1 widget-2 widget-2"
-								"footer footer footer";
-	}
-	.menu-vertical.visible{
-		display: flex;
-		background-color: #444444;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		background-color: #444444;
-		left: 0;
-		position: fixed;
-}
-	.contenedor .navbar{
-		display: none;
-	}
-	.contenedor .sesion{
-		display: none;
-	}
-	.contenedor .boton{
-		z-index: 9999;
-	}
-	.cabecera .boton-hamburguesa{
-		display: block;
-		z-index: 999;
-	}
-	.cabecera .boton-menu{
-		z-index: 200;
-		width: 40px;
-		height: 40px;
-		border: none;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-	  }
-	  
-	  .cabecera .boton-menu span{
-		width: 37px;
-		height: 4px;
-		margin-bottom: 5px;
-		position: relative;
-		background: #fff;
-		border-radius: 3px;
-		transform-origin: 4px 0px;
-		transition: all .2s linear;
-	  }
-	  
-	  .cabecera .boton-menu.close span {
-		opacity: 1;
-		transform: rotate(45deg) translate(0px, 0px);
-		background: #ffffff;
-	  }
-	  
-	  .cabecera .boton-menu.close span:nth-child(2){
-		transform: rotate(-45deg) translate(-8px, 5px);
-	  }
-	  
-	  .cabecera .boton-menu.close span:nth-child(3){
-		display: none;
-	  }
-}
+
 @media screen and (max-width: 768px){
 	.contenedor {
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 20vh 90vh auto 2fr 2fr auto;
+		grid-template-rows: 20vh 90vh auto 2fr auto auto auto;
 		grid-template-areas:	"cabecera cabecera cabecera"
 								"hero hero hero"
 								"contenido contenido contenido"
 								"sidebar sidebar sidebar"
-								"widget-1 widget-2 widget-2"
+								"widget-1 widget-1 widget-1"
+								"widget-2 widget-2 widget-2"
 								"footer footer footer";
 	}
 	.menu-vertical.visible{
@@ -684,6 +629,83 @@ body {
 		width: 200px;
 	}
 }
+@media screen and (max-width: 996px){
+	.contenedor {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 20vh 90vh auto 2fr auto auto;
+		grid-template-areas:	"cabecera cabecera cabecera"
+								"hero hero hero"
+								"contenido contenido contenido"
+								"sidebar sidebar sidebar"
+								"widget-1 widget-2 widget-2"
+								"footer footer footer";
+	}
+	.contenedor .cabecera{
+		background-color: #FFD743;
+	}
+	.escuela_titulo{
+		display: none;
+	}
+	.menu-vertical.visible{
+		display: flex;
+		background-color: #444444;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #444444;
+		left: 0;
+		position: fixed;
+}
+	.contenedor .navbar{
+		display: none;
+	}
+	.contenedor .sesion{
+		display: none;
+	}
+	.contenedor .boton{
+		z-index: 9999;
+	}
+	.cabecera .boton-hamburguesa{
+		display: block;
+		z-index: 999;
+	}
+	.cabecera .boton-menu{
+		z-index: 200;
+		width: 40px;
+		height: 40px;
+		border: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+	  }
+	  
+	  .cabecera .boton-menu span{
+		width: 37px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: #fff;
+		border-radius: 3px;
+		transform-origin: 4px 0px;
+		transition: all .2s linear;
+	  }
+	  
+	  .cabecera .boton-menu.close span {
+		opacity: 1;
+		transform: rotate(45deg) translate(0px, 0px);
+		background: #ffffff;
+	  }
+	  
+	  .cabecera .boton-menu.close span:nth-child(2){
+		transform: rotate(-45deg) translate(-8px, 5px);
+	  }
+	  
+	  .cabecera .boton-menu.close span:nth-child(3){
+		display: none;
+	  }
+}
 /** Fin Index **/
 /** Contacto **/
 
@@ -755,7 +777,7 @@ body {
     padding:10px;
 	margin: 20px;
 	overflow: hidden;
-	background-color: #122f6e;
+	background-color: #1e3847;
   }
   
   .imagen{
@@ -772,7 +794,7 @@ body {
   }
   .box-boton{
 	width: 35%;
-	margin: auto;
+	margin: 30px auto;
 	text-align: center;
 	background-color: #ccc;
 	cursor: pointer;
@@ -787,7 +809,7 @@ body {
 	color: #E9ECF4;
     padding: 18px 10px ;
 	margin: 0px auto;
-    z-index:100;
+    z-index:1;
 	background-color: #820024;
 	text-align: justify;
    }
