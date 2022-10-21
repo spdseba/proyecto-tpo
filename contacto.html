@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="img/assets/favicon.ico">
     <!--Font awesome 6.2.0-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- CSS only -->
@@ -57,15 +59,15 @@
                         <div id="mensaje_error"></div>
                         <div class="form-group mb-2">
                             <span class="requerido">*</span>
-                            <input type="text" class="form-control " id="nombre" name="nombre_apellido" placeholder="Nombre y Apellido..." >
+                            <input type="text" class="form-control " id="nombre" name="nombre_apellido" placeholder="Nombre y Apellido..." required>
                           </div>
                         <div class="form-group mb-2">
                             <span class="requerido">*</span>
-                          <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico..." >
+                          <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico..." required>
                         </div>
                         <div class="form-group mb-2">
                             <span class="requerido">*</span>
-                          <textarea class="form-control" id="comentario" name="comentario" placeholder="Comentario..." rows="10" maxlength="500" ></textarea>
+                          <textarea class="form-control" id="comentario" name="comentario" placeholder="Comentario..." rows="10" maxlength="500" required></textarea>
                             <span>Maximo: 500 caracteres</span>
                             <br>
                             <span>(*) Requerido</span>
